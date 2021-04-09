@@ -1,6 +1,6 @@
 {
   "name": "simple-oauth2-clients",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "OAuth 2.0 client configurations (Google, Facebook, GitHub, etc.)",
   "keywords": [
     "apple",
@@ -41,6 +41,7 @@
     "build": "babel --env-name production -x \".ts\" --out-dir . \"*.ts\" && tsc"
   },
   "dependencies": {
+    "@types/simple-oauth2": "^4.1.0",
     "simple-oauth2": "^4.2.0"
   },
   "devDependencies": {
