@@ -3,4 +3,3 @@
  */
 export { AuthorizationCode as FacebookAuthorizationCode } from "./facebook";
 export { AuthorizationCode as GitHubAuthorizationCode } from "./github";
-export * from "./types";

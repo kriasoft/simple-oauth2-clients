@@ -13,10 +13,8 @@ module.exports = function config(api) {
 
     plugins: [["@babel/plugin-proposal-class-properties", { loose: true }]],
 
-    ignore:
-      api.env() === "test"
-        ? []
-        : ["src/types.ts", "**/__tests__/**", "**/*.test.ts"],
+    ignore: api.env() === "test" ? [] : ["*.d.ts", "*.test.ts"],
+
     sourceMaps: api.env() === "production",
 
     overrides: [

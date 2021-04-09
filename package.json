@@ -1,17 +1,23 @@
 {
   "name": "simple-oauth2-clients",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "OAuth 2.0 client configurations (Google, Facebook, GitHub, etc.)",
   "keywords": [
     "apple",
     "auth",
     "authentication",
     "client",
+    "credentials",
     "facebook",
     "github",
     "google",
     "http",
-    "oauth"
+    "oauth 2.0",
+    "oauth 2",
+    "oauth",
+    "oauth2",
+    "oauth20",
+    "token"
   ],
   "license": "MIT",
   "author": {
@@ -27,8 +33,8 @@
     "type": "patreon",
     "url": "https://patreon.com/koistya"
   },
-  "main": "lib/validate.js",
-  "types": "lib/validate.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint --report-unused-disable-directives .",
     "test": "jest",

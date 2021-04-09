@@ -8,18 +8,36 @@
 
 Pre-configured OAuth 2.0 clients based on [`simple-oauth2`](http://lelylan.github.io/simple-oauth2/). You can use it as a simpler alternative to Passport.js for implementing login flows via 3rd party login providers such as Google, Facebook, Apple, Twitter, etc.
 
+- **Google** OAuth 2.0 client ([docs](https://developers.google.com/identity/protocols/oauth2/))
+- **Facebook** OAuth 2.0 client ([docs](https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow))
+- **GitHub** OAuth 2.0 client ([docs](https://docs.github.com/en/developers/apps/authorizing-oauth-apps))
+- ... more is coming (create a [PR](https://docs.github.com/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request))
+
 ## Getting Started
 
 ```bash
 $ npm install simple-oauth2-clients
 ```
 
-```
+Provide environment variables for the OAuth 2.0 providers that you need, For example:
+
+```bash
+# Google OAuth 2.0 credentials
+# https://console.cloud.google.com/apis/credentials
+GOOGLE_CLIENT_ID=xxxxx.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=xxxxx
+
+# Facebook App
+# https://developers.facebook.com/apps/
+FACEBOOK_APP_ID=xxxxx
+FACEBOOK_APP_SECRET=xxxxx
+
+# GitHub App
+# https://github.com/settings/applications
 GITHUB_CLIENT_ID=xxxxx
 GITHUB_CLIENT_SECRET=xxxxx
 
-FACEBOOK_APP_ID=xxxxx
-FACEBOOK_APP_SECRET=xxxxx
+...
 ```
 
 ```js
@@ -49,8 +67,7 @@ app.get("/auth/github/return", async function (req, res, next) {
     });
 
     // Create a new user, or authenticate an existing one.
-    // const user = await connect(req, tokens);
-    // req.signIn(user);
+    // await authorize(req, tokens);
     // res.redirect("/");
   } catch (err) {
     next(err);
