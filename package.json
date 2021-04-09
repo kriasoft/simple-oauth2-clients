@@ -1,0 +1,61 @@
+{
+  "name": "simple-oauth2-clients",
+  "version": "0.1.0",
+  "description": "OAuth 2.0 client configurations (Google, Facebook, GitHub, etc.)",
+  "keywords": [
+    "apple",
+    "auth",
+    "authentication",
+    "client",
+    "facebook",
+    "github",
+    "google",
+    "http",
+    "oauth"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Kriasoft",
+    "email": "hello@kriasoft.com",
+    "url": "https://kriasoft.com"
+  },
+  "repository": "kriasoft/simple-oauth2-clients",
+  "contributors": [
+    "Konstantin Tarkus <hello@tarkus.me> (https://tarkus.me/)"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://patreon.com/koistya"
+  },
+  "main": "lib/validate.js",
+  "types": "lib/validate.d.ts",
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives .",
+    "test": "jest",
+    "build": "babel --env-name production -x \".ts\" --out-dir . \"*.ts\" && tsc"
+  },
+  "dependencies": {
+    "simple-oauth2": "^4.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.37",
+    "@types/simple-oauth2": "^4.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "@yarnpkg/pnpify": "^2.4.0",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
