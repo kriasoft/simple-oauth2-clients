@@ -27,7 +27,8 @@ class AuthorizationCode extends _simpleOauth.AuthorizationCode {
         tokenPath: `/${version}/oauth/access_token`,
         authorizeHost: "https://www.facebook.com",
         authorizePath: `/${version}/dialog/oauth`
-      }
+      },
+      options: options.options
     });
   }
 

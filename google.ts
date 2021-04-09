@@ -2,6 +2,7 @@
  * @copyright 2021-present Kriasoft (https://git.io/JOevo)
  */
 
+import type { ModuleOptions } from "simple-oauth2";
 import { AuthorizationCode as Base } from "simple-oauth2";
 
 export type AuthorizationCodeOptions = {
@@ -16,6 +17,8 @@ export type AuthorizationCodeOptions = {
    * @default process.env.GOOGLE_CLIENT_SECRET
    */
   secret?: string;
+
+  options?: ModuleOptions<"client_id">["options"];
 };
 
 export class AuthorizationCode extends Base {
@@ -31,6 +34,7 @@ export class AuthorizationCode extends Base {
         authorizeHost: "https://www.googleapis.com",
         authorizePath: "/oauth2/v4/token",
       },
+      options: options.options,
     });
   }
 }

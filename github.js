@@ -24,7 +24,8 @@ class AuthorizationCode extends _simpleOauth.AuthorizationCode {
         tokenPath: "/login/oauth/access_token",
         authorizeHost: "https://github.com",
         authorizePath: "/login/oauth/authorize"
-      }
+      },
+      options: options.options
     });
   }
 

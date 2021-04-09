@@ -1,6 +1,6 @@
 {
   "name": "simple-oauth2-clients",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "OAuth 2.0 client configurations (Google, Facebook, GitHub, etc.)",
   "keywords": [
     "apple",

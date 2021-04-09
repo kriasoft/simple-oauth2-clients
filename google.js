@@ -24,7 +24,8 @@ class AuthorizationCode extends _simpleOauth.AuthorizationCode {
         tokenPath: "/o/oauth2/v2/auth",
         authorizeHost: "https://www.googleapis.com",
         authorizePath: "/oauth2/v4/token"
-      }
+      },
+      options: options.options
     });
   }
 
